@@ -1,0 +1,35 @@
+Info: Tactics
+/w gm &{template:default} {{name=Tactics}} {{=Tactics text goes here..}}
+
+Weapon: 
+&{template:lancer} {{name=Weapon}} {{tags=Type}} {{to-hit=[[d20+0]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{kinetic=[[d6]]}} {{range=[[5]]}} {{effect=}} {{color=black}}
+
+Tech: Attack
+&{template:lancer} {{name=Tech Attack}} {{tags=}} {{to-hit=[[d20+0]]}} {{range=[[@{sensors}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{effect=}} {{color=purple}}
+
+Tech: Action
+&{template:lancer} {{name=Tech Action}} {{tags=}} {{range=[[@{sensors}]]}} {{effect=}} {{color=purple}}
+
+Trait: 
+/w gm &{template:lancer} {{name=Trait}} {{tags=}} {{effect=}} {{color=red}}
+
+System: 
+/w gm &{template:lancer} {{name=System}} {{tags=}} {{effect=}} {{color=green}}
+
+Reaction: 
+/w gm &{template:lancer} {{name=Reaction: }} {{tags=}} {{effect=}} {{color=teal}}
+
+Action: Grapple
+&{template:lancer} {{name=Grapple}} {{to-hit=[[d20+@{npc_tier}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{effect=The NPC makes a melee attack against a character adjacent to them, grappling them if successful.}}
+
+Action: Ram
+&{template:lancer} {{name=Ram}} {{to-hit=[[d20+@{npc_tier}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{effect=The NPC makes a melee attack against a character adjacent to them and their size or smaller.
+
+On a success, they knock their target Prone and may also knock them up to 1 space back.}}
+
+Action: Search
+&{template:lancer} {{name=Search}} {{to-hit=[[d20+@{sys}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{range=[[@{sensors}]]}} {{effect=The NPC makes a **contested** Systems check against the Agility of a Hidden character within Sensors. On a success, the target ceases to be Hidden.}}
+
+
+
+
