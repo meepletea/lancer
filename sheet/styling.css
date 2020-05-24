@@ -30,18 +30,19 @@
 /* example colors */
 .sheet-rolltemplate-lancer .sheet-container {
     /* this is the default color */
-    --header-bg-color: rgba(112,32,130,1);
+    --header-bg-color: #D2B48C;
     --header-text-color: #FFF;
 }
 .sheet-rolltemplate-lancer .sheet-container.sheet-color-red {
-    --header-bg-color: #F00;
+    --header-bg-color: #c31a20;
+    --header-text-color: #FFF;
 }
 .sheet-rolltemplate-lancer .sheet-container.sheet-color-green {
-    --header-bg-color: rgb(0, 133, 0);
-    --header-text-color: #000;
+    --header-bg-color: #68be43;
+    --header-text-color: #FFF;
 }
 .sheet-rolltemplate-lancer .sheet-container.sheet-color-teal {
-    --header-bg-color: rgb(0, 133, 133);
+    --header-bg-color: #0a7675;
     --header-text-color: #000;
 }
 .sheet-rolltemplate-lancer .sheet-container.sheet-color-black {
@@ -51,7 +52,13 @@
 }
 .sheet-rolltemplate-lancer .sheet-container.sheet-color-purple {
     /* this is the default color */
-    --header-bg-color: rgba(112,32,130,1);
+    --header-bg-color: #7f1f78;
+    --header-text-color: #FFF;
+}
+
+.sheet-rolltemplate-lancer .sheet-container.sheet-color-purple {
+    /* this is the default color */
+    --header-bg-color: #c85a00;
     --header-text-color: #FFF;
 }
 
@@ -81,7 +88,15 @@
 */
 
 /* Range/Threat & Damage row */
-.sheet-rolltemplate-lancer .sheet-rng-dmg .sheet-to-hit {
+.sheet-rolltemplate-lancer .sheet-rng-dmg {
+    font-weight: bold;
+    grid-column: span 2;
+    text-align: left;
+    padding: 5px;
+}
+
+/* Range/Threat & Damage row */
+.sheet-rolltemplate-lancer .sheet-to-hit {
     grid-column: span 2;
     text-align: left;
     padding: 5px;
@@ -97,9 +112,25 @@
 
 /* Icon */
 .sheet-rolltemplate-lancer .sheet-icon {
-    max-height: 20px;
+    max-height: 15px;
 }
 
 .sheet-rolltemplate-lancer .inlinerollresult  {
     background-color: transparent;
+    border: none;
 }
+
+.sheet-rolltemplate-lancer .inlinerollresult.fullcrit {
+    color: #000000;
+    border: none;
+ }
+  
+ .sheet-rolltemplate-lancer .inlinerollresult.fullfail {
+     color: #000000;
+     border: none;
+ }
+  
+ .sheet-rolltemplate-lancer .inlinerollresult.importantroll {
+    color: #000000;
+    border: none;
+ }
