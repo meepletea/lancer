@@ -1,0 +1,35 @@
+<rolltemplate class="sheet-rolltemplate-lancer">
+    <div class="sheet-container sheet-color-{{color}}">
+      <div class="sheet-header">
+        {{#attack}}<div class="sheet-result">{{attack}}</div>{{/attack}}
+        {{#name}}<div class="sheet-name">{{name}}</div>{{/name}}
+        {{#tags}}<div class="sheet-tags">{{tags}}</div>{{/tags}}
+      </div>
+      <div class="sheet-content">
+        <div class="sheet-whole-row">
+            {{#range}}[<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/range.png" />{{range}}] {{/range}}
+            {{#threat}}[<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/threat.png" />{{threat}}] {{/threat}}
+            {{#cone}}[<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/cone.png" />{{cone}}] {{/cone}}
+            {{#burst}}[<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/burst.png" />{{burst}}] {{/burst}}
+            {{#line}}[<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/line.png" />{{line}}] {{/line}}
+            {{#blast}}[<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/blast.png" />{{blast}}] {{/blast}}
+            {{#kinetic}}[{{kinetic}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/kinetic.png" />] {{/kinetic}}
+            {{#energy}}[{{energy}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/kinetic.png" />] {{/energy}}
+            {{#explosive}}[{{explosive}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/explosive.png" />] {{/explosive}}
+            {{#heat}}[{{heat}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/heat.png" />] {{/heat}}
+            {{#burn}}[{{burn}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/burn.png" />] {{/burn}}
+        </div>
+        {{#to-hit}}
+        <div class="sheet-whole-row">
+            {{to-hit}}
+            {{#acc-diff}} ± <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/acc.png" /><img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/diff.png" /> {{acc-diff}}{{/acc-diff}}
+        </div>
+        {{/to-hit}}
+        {{#allprops() name tags effect color to-hit acc-diff range threat cone burst line blast kinetic energy explosive heat burn}}
+        <div class="sheet-key">{{key}}</div>
+        <div class="sheet-value">{{value}}</div>
+        {{/allprops() name tags effect color to-hit acc-diff range threat cone burst line blast kinetic energy explosive heat burn}}
+        {{#effect}}<div class="sheet-whole-row">{{effect}}</div>{{/effect}}
+      </div>
+    </div>
+  </rolltemplate>
