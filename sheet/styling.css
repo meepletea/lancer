@@ -43,7 +43,7 @@
 }
 .sheet-rolltemplate-lancer .sheet-container.sheet-color-teal {
     --header-bg-color: #0a7675;
-    --header-text-color: #000;
+    --header-text-color: #FFF;
 }
 .sheet-rolltemplate-lancer .sheet-container.sheet-color-black {
     /* this is the default color */
@@ -134,3 +134,4 @@
     color: #000000;
     border: none;
  }
+ 
