@@ -1,0 +1,62 @@
+GM: Stat Block
+/w gm &{template:default} {{name=HASE}} {{Hull=[[@{hull}]]}} {{Agility=[[@{agi}]]}} {{Systems=[[@{sys}]]}} {{Engineering=[[@{eng}]]}}
+/w gm &{template:default} {{name=Physical Defense}} {{Evasion=[[@{evasion}]]}} {{Max HP=[[@{selected|hp|max}]]}} {{Armor=[[@{armor}]]}} {{Max Structure=[[@{selected|struct|max}]]}}
+/w gm &{template:default} {{name=Special Defense}} {{E-Defense=[[@{e-def}]]}} {{Heat Cap=[[@{selected|heat|max}]]}} {{Max Reactor=[[@{selected|reactor|max}]]}}
+/w gm &{template:default} {{name=Misc}} {{Speed=[[@{speed}]]}} {{Sensors=[[@{sensors}]]}} {{Size=[[@{size}]]}} {{Grit=[[@{grit}]]}}
+
+Defense: Saves
+&{template:default} {{name=Saves}} {{Hull=[[d20+@{hull}]]}} {{Agility=[[d20+@{agi}]]}} {{Systems=[[d20+@{sys}]]}} {{Engineering=[[d20+@{eng}]]}}
+
+Weapon: 
+&{template:lancer} {{name=Weapon}} {{tags=Type}} {{to-hit=[[d20+0]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{kinetic=[[d6]]}} {{range=[[5]]}} {{effect=}} {{color=black}}
+
+Invade: Fragment Signal
+&{template:lancer} {{name=Invade}} {{tags=Quick Tech}} {{to-hit=[[d20+@{tech-atk}+@{grit}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{range=[[@{sensors}]]}} {{effect=Make a tech attack against a character within [[@{sensors}]] and line of sight.
+
+On a success, the target takes 2``HEAT`` and becomes ``IMPAIRED`` and ``SLOWED`` until the end of their next turn.}} {{color=purple}}
+
+Tech: Action
+&{template:lancer} {{name=Tech Action}} {{tags=}} {{range=[[@{sensors}]]}} {{effect=}} {{color=purple}}
+
+Trait: 
+&{template:lancer} {{name=Trait}} {{tags=Trait}} {{effect=}} {{color=red}}
+
+System: New
+&{template:lancer} {{name=System}} {{tags=}} {{effect=}} {{color=green}}
+
+Reaction: 
+&{template:lancer} {{name=Reaction: }} {{tags=}} {{effect=**Trigger:**
+
+**Effect:**}} {{color=teal}}
+
+Action: Grapple
+&{template:lancer} {{name=Grapple}} {{to-hit=[[d20+@{grit}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{effect=Make a melee attack against an adjacent character.
+
+On a success,
+• both characters become ``ENGAGED``;
+• neither character can **Boost** or take reactions for
+the duration of the grapple;
+• the smaller character becomes ``IMMOBILIZED`` but
+moves when the larger party moves, mirroring their movement.}}
+
+Action: Ram
+&{template:lancer} {{name=Ram}} {{to-hit=[[d20+@{grit}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{effect=Make a melee attack against an adjacent character the same **SIZE** or smaller than you.
+
+On a success, your target is knocked **PRONE** and you may
+also choose to knock them back by one space, directly away from you.}}
+
+Action: Search
+&{template:lancer} {{name=Search}} {{to-hit=[[d20+@{sys}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{range=[[@{sensors}]]}} {{effect=The NPC makes a contested Systems check against the Agility of a Hidden character within Sensors. On a success, the target ceases to be Hidden.}}
+
+Action: Improvised Attack
+&{template:lancer} {{name=Improvised Attack}} {{to-hit=[[d20+@{grit}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{kinetic=[[1d6]]}} {{threat=[[1]]}}
+
+
+
+&{template:lancer} {{name=Invade}} {{tags=Quick Tech}} {{to-hit=[[d20+@{tech-atk}+@{grit}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{range=[[@{sensors}]]}} {{effect=Make a tech attack against a character within [[@{sensors}]] and line of sight.
+
+On a success, the target takes 2``HEAT`` and ...}} {{color=purple}}
+
+
+
+

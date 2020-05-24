@@ -80,17 +80,19 @@
 }
 */
 
-/* Make even-numbered rows grey */
-    .sheet-rolltemplate-lancer .sheet-content :nth-child(4n+3),
-    .sheet-rolltemplate-lancer .sheet-content :nth-child(4n) {
-    background:#EEE;
-}
-
-/* Span text accross two columns */
-.sheet-rolltemplate-lancer .sheet-whole-row {
+/* Range/Threat & Damage row */
+.sheet-rolltemplate-lancer .sheet-rng-dmg .sheet-to-hit {
     grid-column: span 2;
     text-align: left;
     padding: 5px;
+}
+
+/* Effects & Notes */
+.sheet-rolltemplate-lancer .sheet-effect {
+    grid-column: span 2;
+    text-align: left;
+    padding: 5px;
+    background:#EEE;
 }
 
 /* Icon */
