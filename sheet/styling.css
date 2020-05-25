@@ -1,137 +1,227 @@
-/* Smaller margins - remove these if you want the huge default left margin */
-.sheet-rolltemplate-lancer {
-    margin-left: -37px;
-}
-.withoutavatars .sheet-rolltemplate-lancer {
-    margin-left: -7px;
-}
+    .charsheet {
+        background-color: #ddd;
+        min-width: 800px;
+    }
 
-.sheet-rolltemplate-lancer .sheet-container {
-    border: 1px solid;
-    /* by default, the border is the same color as the header. You can change this here, e.g. to black */
-    border-color: var(--header-bg-color);
-}
+    label {
+        display: inline-block;
+    }
 
-/* Header formatting - name and tags */
-.sheet-rolltemplate-lancer .sheet-header {
-    background-color: var(--header-bg-color);
-    /* change text-align to center to center the header text */
-    text-align: left;
-    color: var(--header-text-color);
-    padding: 5px;
-}
-.sheet-rolltemplate-lancer .sheet-name {
-    font-size:1.1em;
-}
-.sheet-rolltemplate-lancer .sheet-tags {
-    font-size:.9em;
-}
+    input {
+        display: inline-block;
+        font-family: Consolas, monaco, monospace;
+        border: none;
+        background: transparent;
+    }
 
-/* example colors */
-.sheet-rolltemplate-lancer .sheet-container {
-    /* this is the default color */
-    --header-bg-color: #D2B48C;
-    --header-text-color: #FFF;
-}
-.sheet-rolltemplate-lancer .sheet-container.sheet-color-red {
-    --header-bg-color: #c31a20;
-    --header-text-color: #FFF;
-}
-.sheet-rolltemplate-lancer .sheet-container.sheet-color-green {
-    --header-bg-color: #68be43;
-    --header-text-color: #FFF;
-}
-.sheet-rolltemplate-lancer .sheet-container.sheet-color-teal {
-    --header-bg-color: #0a7675;
-    --header-text-color: #FFF;
-}
-.sheet-rolltemplate-lancer .sheet-container.sheet-color-black {
-    /* this is the default color */
-    --header-bg-color: #000;
-    --header-text-color: #FFF;
-}
-.sheet-rolltemplate-lancer .sheet-container.sheet-color-purple {
-    /* this is the default color */
-    --header-bg-color: #7f1f78;
-    --header-text-color: #FFF;
-}
+    input[type=text]:focus {
+        background-color: lightblue;
+    }
 
-.sheet-rolltemplate-lancer .sheet-container.sheet-color-purple {
-    /* this is the default color */
-    --header-bg-color: #c85a00;
-    --header-text-color: #FFF;
-}
+    input[type=number]:focus {
+        background-color: lightblue;
+    }
 
-/* Allprops part */
-.sheet-rolltemplate-lancer .sheet-content {
-    display: grid;
-    background: #FFF;
-    /* Header formatting - modify the column layout below */
-    grid-template-columns: auto auto;
-    /* Line height to match default roll template */
-    line-height:1.4em;
-}
-.sheet-rolltemplate-lancer .sheet-content > div {
-    padding: 5px;
-}
+    textarea:focus {
+        background-color: lightblue;
+    }
 
-/* Left column */
-.sheet-rolltemplate-lancer .sheet-content .sheet-key {
-    font-weight: bold;
-    padding-right: 10px;
-    text-align: right;
-}
+    span.sheet-big {
+        font-family: Consolas, monaco, monospace;
+        font-weight: bold;
+        font-size:1.5em;
+    }
 
-/* Empty rule, use this if you want to change the right column 
-.sheet-rolltemplate-lancer .sheet-value {
-}
-*/
+    h1 {
+        font-family: Consolas, monaco, monospace;
+    }
 
-/* Range/Threat & Damage row */
-.sheet-rolltemplate-lancer .sheet-rng-dmg {
-    font-weight: bold;
-    grid-column: span 2;
-    text-align: left;
-    padding: 5px;
-}
+    input.sheet-big[type=number] {
+        -moz-appearance: textfield;
+        width: 40px;
+        font-size:2em;
+        background: transparent;
+        text-align: center; 
+    }
 
-/* Range/Threat & Damage row */
-.sheet-rolltemplate-lancer .sheet-to-hit {
-    grid-column: span 2;
-    text-align: left;
-    padding: 5px;
-}
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 
-/* Effects & Notes */
-.sheet-rolltemplate-lancer .sheet-effect {
-    grid-column: span 2;
-    text-align: left;
-    padding: 5px;
-    background:#EEE;
-}
+    div.sheet-card{
+        border: solid gray;
+        border-radius: 4px;
+        padding: 5px;
+    }
 
-/* Icon */
-.sheet-rolltemplate-lancer .sheet-icon {
-    max-height: 15px;
-}
+    /* input.sheet-card-line {
 
-.sheet-rolltemplate-lancer .inlinerollresult  {
-    background-color: transparent;
-    border: none;
-}
+    } */
 
-.sheet-rolltemplate-lancer .inlinerollresult.fullcrit {
-    color: #000000;
-    border: none;
- }
-  
- .sheet-rolltemplate-lancer .inlinerollresult.fullfail {
-     color: #000000;
-     border: none;
- }
-  
- .sheet-rolltemplate-lancer .inlinerollresult.importantroll {
-    color: #000000;
-    border: none;
- }
- 
+    textarea.sheet-card-block {
+        font-family: Consolas, monaco, monospace;
+        background: transparent;
+        border: none;
+    }
+
+    input.sheet-card-digits {
+        font-family: Consolas, monaco, monospace;
+        background: transparent;
+        text-align: right;
+        border: none;
+        width: 30px;
+    }
+
+    label.sheet-card-caption {
+        font-family: Consolas, monaco, monospace;
+        font-size:xx-small;
+        padding-bottom: 0px
+    }
+
+    /* Icon */
+    .sheet-icon {
+        max-height: 15px;
+    }
+
+    /* Smaller margins - remove these if you want the huge default left margin */
+    .sheet-rolltemplate-lancer {
+        margin-left: -37px;
+    }
+    .withoutavatars .sheet-rolltemplate-lancer {
+        margin-left: -7px;
+    }
+
+    .sheet-rolltemplate-lancer .sheet-container {
+        border: 1px solid;
+        /* by default, the border is the same color as the header. You can change this here, e.g. to black */
+        border-color: var(--header-bg-color);
+    }
+
+    /* Header formatting - name and tags */
+    .sheet-rolltemplate-lancer .sheet-header {
+        background-color: var(--header-bg-color);
+        text-align: left;
+        color: var(--header-text-color);
+        padding: 5px;
+        font-family: Consolas, monaco, monospace;
+    }
+    .sheet-rolltemplate-lancer .sheet-name {
+        font-size:1.1em;
+    }
+    .sheet-rolltemplate-lancer .sheet-tags {
+        font-size:.9em;
+    }
+
+    /* example colors */
+    .sheet-rolltemplate-lancer .sheet-container {
+        /* this is the default color */
+        --header-bg-color: #D2B48C;
+        --header-text-color: #FFF;
+    }
+    .sheet-rolltemplate-lancer .sheet-container.sheet-color-red {
+        --header-bg-color: #c31a20;
+        --header-text-color: #FFF;
+    }
+    .sheet-rolltemplate-lancer .sheet-container.sheet-color-green {
+        --header-bg-color: #68be43;
+        --header-text-color: #FFF;
+    }
+    .sheet-rolltemplate-lancer .sheet-container.sheet-color-teal {
+        --header-bg-color: #0a7675;
+        --header-text-color: #FFF;
+    }
+    .sheet-rolltemplate-lancer .sheet-container.sheet-color-black {
+        /* this is the default color */
+        --header-bg-color: #000;
+        --header-text-color: #FFF;
+    }
+    .sheet-rolltemplate-lancer .sheet-container.sheet-color-purple {
+        /* this is the default color */
+        --header-bg-color: #7f1f78;
+        --header-text-color: #FFF;
+    }
+
+    .sheet-rolltemplate-lancer .sheet-container.sheet-color-orange {
+        /* this is the default color */
+        --header-bg-color: #c85a00;
+        --header-text-color: #FFF;
+    }
+
+    /* Allprops part */
+    .sheet-rolltemplate-lancer .sheet-content {
+        display: grid;
+        background: #FFF;
+        /* Header formatting - modify the column layout below */
+        grid-template-columns: auto auto;
+        /* Line height to match default roll template */
+        line-height:1.4em;
+    }
+    .sheet-rolltemplate-lancer .sheet-content > div {
+        padding: 5px;
+    }
+
+    /* Left column */
+    .sheet-rolltemplate-lancer .sheet-content .sheet-key {
+        font-weight: bold;
+        padding-right: 10px;
+        text-align: right;
+    }
+
+    /* Empty rule, use this if you want to change the right column 
+    .sheet-rolltemplate-lancer .sheet-value {
+    }
+    */
+
+    /* Range/Threat & Damage row */
+    .sheet-rolltemplate-lancer .sheet-rng-dmg {
+        font-weight: bold;
+        grid-column: span 2;
+        text-align: left;
+        padding: 5px;
+        font-family: Consolas, monaco, monospace;
+    }
+
+    /* Range/Threat & Damage row */
+    .sheet-rolltemplate-lancer .sheet-to-hit {
+        grid-column: span 2;
+        text-align: left;
+        padding: 5px;
+        font-family: Consolas, monaco, monospace;
+    }
+
+    /* Effects & Notes */
+    .sheet-rolltemplate-lancer .sheet-effect {
+        grid-column: span 2;
+        text-align: left;
+        padding: 5px;
+        background:#EEE;
+    }
+
+    /* Icon */
+    .sheet-rolltemplate-lancer .sheet-icon {
+        max-height: 15px;
+        vertical-align: text-top;
+    }
+
+    .sheet-rolltemplate-lancer .inlinerollresult  {
+        background-color: transparent;
+        border: none;
+    }
+
+    .sheet-rolltemplate-lancer .inlinerollresult.fullcrit {
+        color: #000000;
+        border: none;
+    }
+    
+    .sheet-rolltemplate-lancer .inlinerollresult.fullfail {
+        color: #000000;
+        border: none;
+    }
+    
+    .sheet-rolltemplate-lancer .inlinerollresult.importantroll {
+        color: #000000;
+        border: none;
+    }
+    

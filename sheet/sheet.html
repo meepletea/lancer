@@ -1,35 +1,238 @@
-<rolltemplate class="sheet-rolltemplate-lancer">
-    <div class="sheet-container sheet-color-{{color}}">
-      <div class="sheet-header">
-        {{#attack}}<div class="sheet-result">{{attack}}</div>{{/attack}}
-        {{#name}}<div class="sheet-name">{{name}}</div>{{/name}}
-        {{#tags}}<div class="sheet-tags">{{tags}}</div>{{/tags}}
+  <div class="2colrow">
+    <div class="col">
+      <div class="2colrow">
+        <div class="col">
+          <input class="sheet-big" type="number" name="attr_hull" />
+          <span class="sheet-big">//HULL</span><br />
+
+          <input class="sheet-big" type="number" name="attr_sys" />
+          <span class="sheet-big">//SYS</span><br />
+
+          <input class="sheet-big" type="number" name="attr_struct" />
+          <span class="sheet-big">//STRUCT</span><br />
+
+          <input class="sheet-big" type="number" name="attr_reactor" />
+          <span class="sheet-big">//REACTOR</span><br />
+
+          <input class="sheet-big" type="number" name="attr_evade" />
+          <span class="sheet-big">//EVASION</span><br />
+          
+          <input class="sheet-big" type="number" name="attr_sensors" />
+          <span class="sheet-big">//SENSORS</span><br />
+
+          <input class="sheet-big" type="number" name="attr_speed" />
+          <span class="sheet-big">//SPEED</span><br />
+
+          <input class="sheet-big" type="number" name="attr_grit" />
+          <span class="sheet-big">//GRIT</span><br />
+          
+        </div>
+        <div class="col">
+          <input class="sheet-big" type="number" name="attr_agi" />
+          <span class="sheet-big">//AGI</span><br />
+
+          <input class="sheet-big" type="number" name="attr_eng" />
+          <span class="sheet-big">//ENG</span><br />
+
+          <input class="sheet-big" type="number" name="attr_hp" />
+          <span class="sheet-big">//HP</span><br />
+
+          <input class="sheet-big" type="number" name="attr_heat" />
+          <span class="sheet-big">//HEAT</span><br />
+
+          <input class="sheet-big" type="number" name="attr_e-def" />
+          <span class="sheet-big">//E-DEF</span><br />
+
+          <input class="sheet-big" type="number" name="attr_tech-atk" />
+          <span class="sheet-big">//TECH ATK</span><br />
+
+          <input class="sheet-big" type="number" name="attr_save" />
+          <span class="sheet-big">//SAVE</span><br />
       </div>
-      <div class="sheet-content">
-        <div class="sheet-rng-dmg">
-            {{#range}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/range.png" />{{range}} ] {{/range}}
-            {{#threat}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/threat.png" />{{threat}} ] {{/threat}}
-            {{#cone}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/cone.png" />{{cone}} ] {{/cone}}
-            {{#burst}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/burst.png" />{{burst}} ] {{/burst}}
-            {{#line}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/line.png" />{{line}} ] {{/line}}
-            {{#blast}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/blast.png" />{{blast}} ] {{/blast}}
-            {{#kinetic}}[ {{kinetic}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/kinetic.png" /> ] {{/kinetic}}
-            {{#energy}}[ {{energy}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/energy.png" /> ] {{/energy}}
-            {{#explosive}}[ {{explosive}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/explosive.png" /> ] {{/explosive}}
-            {{#heat}}[ {{heat}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/heat.png" /> ] {{/heat}}
-            {{#burn}}[ {{burn}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/burn.png" /> ] {{/burn}}
-        </div>
-        {{#to-hit}}
-        <div class="sheet-to-hit">
-            {{to-hit}}
-            {{#acc-diff}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/acc.png" /><img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/diff.png" /> {{acc-diff}}{{/acc-diff}}
-        </div>
-        {{/to-hit}}
-        {{#allprops() name tags effect color to-hit acc-diff range threat cone burst line blast kinetic energy explosive heat burn}}
-        <div class="sheet-key">{{key}}</div>
-        <div class="sheet-value">{{value}}</div>
-        {{/allprops() name tags effect color to-hit acc-diff range threat cone burst line blast kinetic energy explosive heat burn}}
-        {{#effect}}<div class="sheet-effect">{{effect}}</div>{{/effect}}
       </div>
     </div>
-  </rolltemplate>
+
+    <div class="col">
+      <h1>//WEAPONS</h1>
+      <fieldset class="repeating_weapons">
+        <div class="card">
+          <button type="roll" name="roll_weapon" value="&{template:lancer} {{name=@{wpn-name}}} {{tags=@{wpn-tags}}} {{to-hit=[[d20+@{grit}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{range=[[@{wpn-range}]]}} {{threat=[[@{wpn-threat}]]}} {{cone=[[@{wpn-cone}]]}}  {{burst=[[@{wpn-burst}]]}} {{line=[[@{wpn-line}]]}} {{blast=[[@{wpn-blast}]]}} {{kinetic=[[@{wpn-kinetic}]]}} {{energy=[[@{wpn-energy}]]}} {{explosive=[[@{wpn-explosive}]]}}  {{heat=[[@{wpn-heat}]]}} {{burn=[[@{wpn-burn}]]}} {{effect=@{wpn-effect}}} {{color=black}}"></button>
+          <br />
+          <label class="card-caption">Name
+          <input class="card-line" type="text" name="attr_wpn-name" /></label>
+          <br />
+          <label class="card-caption">Tags
+          <input class="card-line" type="text" name="attr_wpn-tags" /></label>
+          <br />
+          <label class="card-caption">Range
+          <input class="card-digits" type="text" name="attr_wpn-range" value="0" /><img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/range.png" />
+          <input class="card-digits" type="text" name="attr_wpn-threat" value="0" /><img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/threat.png" />
+          <input class="card-digits" type="text" name="attr_wpn-cone" value="0" /><img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/cone.png" />
+          <input class="card-digits" type="text" name="attr_wpn-burst" value="0" /><img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/burst.png" />
+          <input class="card-digits" type="text" name="attr_wpn-line" value="0" /><img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/line.png" />
+          <input class="card-digits" type="text" name="attr_wpn-blast" value="0" /><img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/blast.png" />
+          </label>
+          <br />
+          <label class="card-caption">Damage
+          <input class="card-digits" type="text" name="attr_wpn-kinetic" value="0" /><img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/kinetic.png" />
+          <input class="card-digits" type="text" name="attr_wpn-energy" value="0" /><img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/energy.png" />
+          <input class="card-digits" type="text" name="attr_wpn-explosive" value="0" /><img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/explosive.png" />
+          <input class="card-digits" type="text" name="attr_wpn-heat" value="0" /><img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/heat.png" />
+          <input class="card-digits" type="text" name="attr_wpn-burn" value="0" /><img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/burn.png" />
+          </label>
+          <br />
+          <label class="card-caption">Effects
+          <textarea class="card-block" name="attr_wpn-effect"></textarea></label>
+          <br />
+       </div>
+      </fieldset>
+      
+      <h1>//INVASION</h1>
+      <div class="card">
+        <button type="roll" name="roll_frag-sys" value="&{template:lancer} {{name=@{frag-sys-name}}} {{tags=@{frag-sys-tags}}} {{to-hit=[[d20+@{tech-atk}+@{grit}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{range=[[@{sensors}]]}} {{heat=[[2]]}} {{effect=@{frag-sys-effect}}} {{color=purple}}"></button>
+        <br />
+        <label class="card-caption">Name
+        <input class="card-line" type="text" name="attr_frag-sys-name" value="Fragment Signal" />
+        </label>
+        <br />
+        <label class="card-caption">Tags
+        <input class="card-line" type="text" name="attr_frag-sys-tags" value="Quick Tech" />
+        </label>
+        <br />
+        <label class="card-caption">Effects
+        <textarea class="card-block" class="card-line" name="attr_frag-sys-effect">You feed false information, obscene messages, or phantom signals to your target’s computing core. 
+They become IMPAIRED and SLOWED until the end of their next turn."
+        </textarea>
+        </label>
+      </div>
+      <fieldset class="repeating_invd">
+        <div class="card">
+          <button type="roll" name="roll_invd" value="&{template:lancer} {{name=@{invd-name}}} {{tags=@{invd-tags}}} {{to-hit=[[d20+@{tech-atk}+@{grit}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{range=[[@{sensors}]]}} {{heat=[[2]]}} {{effect=@{invd-effect}}} {{color=purple}}"></button>
+          <br />
+          <label class="card-caption">Name
+          <input class="card-line" type="text" name="attr_invd-name"/>
+          </label>
+          <br />
+          <label class="card-caption">Tags
+          <input class="card-line" type="text" name="attr_invd-tags"/>
+          </label>
+          <br />
+          <label class="card-caption">Effects
+          <textarea class="card-block" class="card-line" name="attr_invd-effect"/></textarea>
+          </label>
+        </div>
+      </fieldset>
+      <h1>//REACTIONS</h1>
+      <div class="card">
+        <button type="roll" name="roll_brace" value="&{template:lancer} {{name=@{brace-name}}} {{tags=@{brace-tags}}} {{effect=@{brace-effect}}} {{color=teal}}"></button>
+        <br />
+        <label class="card-caption">Name
+        <input class="card-line" type="text" name="attr_brace-name" value="Brace" />
+        </label>
+        <br />
+        <label class="card-caption">Tags
+        <input class="card-line" type="text" name="attr_brace-tags" value="Reaction, 1/round" />
+        </label>
+        <br />
+        <label class="card-caption">Effects
+        <textarea class="card-block" class="card-line" name="attr_brace-effect">**Trigger:** You are hit by an attack and damage has been rolled. 
+          
+**Effect:** You count as having RESISTANCE to all damage, ``BURN``, and ``HEAT`` from the triggering attack, and until the end of your next turn, all other attacks against you are made at +1``Difficulty``. 
+
+Due to the stress of bracing, you cannot take reactions until the end of your next turn and on that turn, you can only take one quick action – you cannot OVERCHARGE, move normally, take full actions, or take free actions.
+        </textarea>
+        </label>
+      </div>
+      <fieldset class="repeating_react">
+          <div class="card">
+          <button type="roll" name="roll_react" value="&{template:lancer} {{name=@{react-name}}} {{tags=@{react-tags}}} {{effect=@{react-effects}}} {{color=teal}}"></button>
+          <br />
+          <label class="card-caption">Name
+          <input class="card-line" type="text" name="attr_react-name" />
+          </label>
+          <br />
+          <label class="card-caption">Tags
+          <input class="card-line" type="text" name="attr_react-tags" />
+          </label>
+          <br />
+          <label class="card-caption">Effects
+          <textarea class="card-block" class="card-line" name="attr_react-effect"></textarea>
+          </label>
+        </div>
+      </fieldset>
+
+      <h1>//SYSTEMS</h1>
+      <fieldset class="repeating_sys">
+        <div class="card">
+          <button type="roll" name="roll_sys" value="&{template:lancer} {{name=@{sys-name}}} {{tags=@{sys-tags}}} {{effect=@{sys-effects}}} {{color=green}}"></button>
+          <br />
+          <label class="card-caption">Name
+          <input class="card-line" type="text" name="attr_sys-name" />
+          </label>
+          <br />
+          <label class="card-caption">Tags
+          <input class="card-line" type="text" name="attr_sys-tags" />
+          </label>
+          <br />
+          <label class="card-caption">Effects
+          <textarea class="card-block" class="card-line" name="attr_sys-effect"></textarea>
+          </label>
+        </div>
+      </fieldset>
+
+      <h1>//TRAITS</h1>
+      <fieldset class="repeating_traits">
+        <div class="card">
+          <button type="roll" name="roll_trait" value="&{template:lancer} {{name=@{trait-name}}} {{tags=Trait, @{trait-tags}}} {{effect=@{trait-effects}}} {{color=red}}"></button>
+          <br />
+          <label class="card-caption">Name
+          <input class="card-line" type="text" name="attr_trait-name" />
+          </label>
+          <br />
+          <label class="card-caption">Tags
+          <input class="card-line" type="text" name="attr_trait-tags" />
+          </label>
+          <br />
+          <label class="card-caption">Effects
+          <textarea class="card-block" class="card-line" name="attr_trait-effects"></textarea>
+          </label>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+
+  <rolltemplate class="sheet-rolltemplate-lancer">
+      <div class="sheet-container sheet-color-{{color}}">
+        <div class="sheet-header">
+          {{#attack}}<div class="sheet-result">{{attack}}</div>{{/attack}}
+          {{#name}}<div class="sheet-name">{{name}}</div>{{/name}}
+          {{#tags}}<div class="sheet-tags">{{tags}}</div>{{/tags}}
+        </div>
+        <div class="sheet-content">
+          <div class="sheet-rng-dmg">
+              {{#rollGreater() range 0}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/range.png" />{{range}} ] {{/rollGreater() range 0}}
+              {{#rollGreater() threat 0}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/threat.png" />{{threat}} ] {{/rollGreater() threat 0}}
+              {{#rollGreater() cone 0}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/cone.png" />{{cone}} ] {{/rollGreater() cone 0}}
+              {{#rollGreater() burst 0}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/burst.png" />{{burst}} ] {{/rollGreater() burst 0}}
+              {{#rollGreater() line 0}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/line.png" />{{line}} ] {{/rollGreater() line 0}}
+              {{#rollGreater() blast 0}}[ <img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/blast.png" />{{blast}} ] {{/rollGreater() blast 0}}
+              {{#rollGreater() kinetic 0}}[ {{kinetic}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/kinetic.png" /> ] {{/rollGreater() kinetic 0}}
+              {{#rollGreater() energy 0}}[ {{energy}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/energy.png" /> ] {{/rollGreater() energy 0}}
+              {{#rollGreater() explosive 0}}[ {{explosive}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/explosive.png" /> ] {{/rollGreater() explosive 0}}
+              {{#rollGreater() heat 0}}[ {{heat}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/heat.png" /> ] {{/rollGreater() heat 0}}
+              {{#rollGreater() burn 0}}[ {{burn}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/burn.png" /> ] {{/rollGreater() burn 0}}
+          </div>
+          {{#to-hit}}
+          <div class="sheet-to-hit">
+              {{to-hit}}
+              {{#acc-diff}}<img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/acc.png" /><img class="sheet-icon" src="https://raw.githubusercontent.com/meepletea/lancer/master/icons/diff.png" /> {{acc-diff}}{{/acc-diff}}
+          </div>
+          {{/to-hit}}
+          {{#allprops() name tags effect color to-hit acc-diff range threat cone burst line blast kinetic energy explosive heat burn}}
+          <div class="sheet-key">{{key}}</div>
+          <div class="sheet-value">{{value}}</div>
+          {{/allprops() name tags effect color to-hit acc-diff range threat cone burst line blast kinetic energy explosive heat burn}}
+          {{#effect}}<div class="sheet-effect">{{effect}}</div>{{/effect}}
+        </div>
+      </div>
+    </rolltemplate>
