@@ -16,7 +16,6 @@
   <div class="col">
     <input class="status-value" type="number" name="attr_hp" />
     <span class="status-label">//HP</span><br />
-<<<<<<< HEAD
 
     <input class="status-value" type="number" name="attr_heat" />
     <span class="status-label">//HEAT</span><br />
@@ -37,28 +36,6 @@
     <input class="status-value" type="number" name="attr_e-def" />
     <span class="status-label">//E-DEF</span><br />
 
-=======
-
-    <input class="status-value" type="number" name="attr_heat" />
-    <span class="status-label">//HEAT</span><br />
-
-    <input class="status-value" type="number" name="attr_speed" />
-    <span class="status-label">//SPEED</span><br />
-
-    <input class="status-value" type="number" name="attr_save" />
-    <span class="status-label">//SAVE</span><br />
-  </div> 
-  <div class="col">
-    <input class="status-value" type="number" name="attr_sensors" />
-    <span class="status-label">//SENSORS</span><br />
-
-    <input class="status-value" type="number" name="attr_tech-atk" />
-    <span class="status-label">//TECH ATK</span><br />
-
-    <input class="status-value" type="number" name="attr_e-def" />
-    <span class="status-label">//E-DEF</span><br />
-
->>>>>>> 0a9576e... Style roll buttons and repeating sections
     <input class="status-value" type="number" name="attr_evade" />
     <span class="status-label">//EVASION</span><br />
   </div>
@@ -69,11 +46,7 @@
     <h1>//WEAPONS</h1>
     <fieldset class="repeating_weapons">
       <div class="card">
-<<<<<<< HEAD
-        <button class="button-roll" type="roll" name="roll_weapon" value="&{template:lancer} {{name=@{wpn-name}}} {{tags=@{wpn-tags}}} {{to-hit=[[d20+@{grit}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{range=[[@{wpn-range}]]}} {{threat=[[@{wpn-threat}]]}} {{cone=[[@{wpn-cone}]]}}  {{burst=[[@{wpn-burst}]]}} {{line=[[@{wpn-line}]]}} {{blast=[[@{wpn-blast}]]}} {{kinetic=[[@{wpn-kinetic}]]}} {{energy=[[@{wpn-energy}]]}} {{explosive=[[@{wpn-explosive}]]}}  {{heat=[[@{wpn-heat}]]}} {{burn=[[@{wpn-burn}]]}} {{effect=@{wpn-effect}}} {{color=black}}"></button>
-=======
         <button class="card-button" type="roll" name="roll_weapon" value="&{template:lancer} {{name=@{wpn-name}}} {{tags=@{wpn-tags}}} {{to-hit=[[d20+@{grit}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{range=[[@{wpn-range}]]}} {{threat=[[@{wpn-threat}]]}} {{cone=[[@{wpn-cone}]]}}  {{burst=[[@{wpn-burst}]]}} {{line=[[@{wpn-line}]]}} {{blast=[[@{wpn-blast}]]}} {{kinetic=[[@{wpn-kinetic}]]}} {{energy=[[@{wpn-energy}]]}} {{explosive=[[@{wpn-explosive}]]}}  {{heat=[[@{wpn-heat}]]}} {{burn=[[@{wpn-burn}]]}} {{effect=@{wpn-effect}}} {{color=black}}"></button>
->>>>>>> 0a9576e... Style roll buttons and repeating sections
           <input class="card-name" type="text" name="attr_wpn-name" placeholder="Name"/>
           <br />
           <input class="card-tags" type="text" name="attr_wpn-tags" placeholder="Tags"/>
@@ -97,11 +70,7 @@
     </fieldset>
     <h1>//REACTIONS</h1>
       <div class="card">
-<<<<<<< HEAD
-        <button type="roll" name="roll_brace" value="&{template:lancer} {{name=@{brace-name}}} {{tags=@{brace-tags}}} {{effect=@{brace-effect}}} {{color=teal}}"></button>
-=======
         <button class="card-button" type="roll" name="roll_brace" value="&{template:lancer} {{name=@{brace-name}}} {{tags=@{brace-tags}}} {{effect=@{brace-effect}}} {{color=teal}}"></button>
->>>>>>> 0a9576e... Style roll buttons and repeating sections
         <input class="card-name" type="text" name="attr_brace-name" value="Brace" />
         <br />
         <input class="card-tags" type="text" name="attr_brace-tags" value="Reaction, 1/round" />
@@ -115,11 +84,7 @@ Due to the stress of bracing, you cannot take reactions until the end of your ne
       </div>
       <fieldset class="repeating_react">
         <div class="card">
-<<<<<<< HEAD
-          <button type="roll" name="roll_react" value="&{template:lancer} {{name=@{react-name}}} {{tags=@{react-tags}}} {{effect=@{react-effects}}} {{color=teal}}"></button>
-=======
           <button class="card-button" type="roll" name="roll_react" value="&{template:lancer} {{name=@{react-name}}} {{tags=@{react-tags}}} {{effect=@{react-effects}}} {{color=teal}}"></button>
->>>>>>> 0a9576e... Style roll buttons and repeating sections
           <input class="card-name" type="text" name="attr_react-name" placeholder="Name" />
           <br />
           <input class="card-tags" type="text" name="attr_react-tags" placeholder="Tags" />
@@ -130,11 +95,7 @@ Due to the stress of bracing, you cannot take reactions until the end of your ne
       <h1>//TRAITS</h1>
       <fieldset class="repeating_traits">
         <div class="card">
-<<<<<<< HEAD
-          <button type="roll" name="roll_trait" value="&{template:lancer} {{name=@{trait-name}}} {{tags=Trait, @{trait-tags}}} {{effect=@{trait-effects}}} {{color=red}}"></button>
-=======
           <button class="card-button" type="roll" name="roll_trait" value="&{template:lancer} {{name=@{trait-name}}} {{tags=Trait, @{trait-tags}}} {{effect=@{trait-effects}}} {{color=red}}"></button>
->>>>>>> 0a9576e... Style roll buttons and repeating sections
           <input class="card-name" type="text" name="attr_trait-name" placeholder="Name" />
           <br />
           <input class="card-tags" type="text" name="attr_trait-tags" placeholder="Tags" />
@@ -146,11 +107,7 @@ Due to the stress of bracing, you cannot take reactions until the end of your ne
   <div class="col">      
     <h1>//INVASION</h1>
     <div class="card">
-<<<<<<< HEAD
-      <button type="roll" name="roll_frag-sys" value="&{template:lancer} {{name=@{frag-sys-name}}} {{tags=@{frag-sys-tags}}} {{to-hit=[[d20+@{tech-atk}+@{grit}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{range=[[@{sensors}]]}} {{heat=[[2]]}} {{effect=@{frag-sys-effect}}} {{color=purple}}"></button>
-=======
       <button class="card-button" type="roll" name="roll_frag-sys" value="&{template:lancer} {{name=@{frag-sys-name}}} {{tags=@{frag-sys-tags}}} {{to-hit=[[d20+@{tech-atk}+@{grit}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{range=[[@{sensors}]]}} {{heat=[[2]]}} {{effect=@{frag-sys-effect}}} {{color=purple}}"></button>
->>>>>>> 0a9576e... Style roll buttons and repeating sections
       <input class="card-name" type="text" name="attr_frag-sys-name" value="Fragment Signal" />
       <br />
       <input class="card-tags" type="text" name="attr_frag-sys-tags" value="Quick Tech" />
@@ -161,11 +118,7 @@ They become IMPAIRED and SLOWED until the end of their next turn."
     </div>
     <fieldset class="repeating_invd">
       <div class="card">
-<<<<<<< HEAD
-        <button type="roll" name="roll_invd" value="&{template:lancer} {{name=@{invd-name}}} {{tags=@{invd-tags}}} {{to-hit=[[d20+@{tech-atk}+@{grit}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{range=[[@{sensors}]]}} {{heat=[[2]]}} {{effect=@{invd-effect}}} {{color=purple}}"></button>
-=======
         <button class="card-button" type="roll" name="roll_invd" value="&{template:lancer} {{name=@{invd-name}}} {{tags=@{invd-tags}}} {{to-hit=[[d20+@{tech-atk}+@{grit}]]}} {{acc-diff=[[d6]][[d6]][[d6]][[d6]][[d6]][[d6]]}} {{range=[[@{sensors}]]}} {{heat=[[2]]}} {{effect=@{invd-effect}}} {{color=purple}}"></button>
->>>>>>> 0a9576e... Style roll buttons and repeating sections
         <input class="card-name" type="text" name="attr_invd-name" placeholder="Name" />
         <br />
         <input class="card-tags" type="text" name="attr_invd-tags" placeholder="Tags" />
@@ -177,11 +130,7 @@ They become IMPAIRED and SLOWED until the end of their next turn."
     <h1>//SYSTEMS</h1>
     <fieldset class="repeating_sys">
       <div class="card">
-<<<<<<< HEAD
-        <button type="roll" name="roll_sys" value="&{template:lancer} {{name=@{sys-name}}} {{tags=@{sys-tags}}} {{effect=@{sys-effects}}} {{color=green}}"></button>
-=======
         <button class="card-button" type="roll" name="roll_sys" value="&{template:lancer} {{name=@{sys-name}}} {{tags=@{sys-tags}}} {{effect=@{sys-effects}}} {{color=green}}"></button>
->>>>>>> 0a9576e... Style roll buttons and repeating sections
         <input class="card-name" type="text" name="attr_sys-name" placeholder="Name" />
         <br />
         <input class="card-tags" type="text" name="attr_sys-tags" placeholder="Tags" />
