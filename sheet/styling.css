@@ -1,10 +1,6 @@
     .charsheet {
-        background-color: #ddd;
+        background-color: #fdf6e3 ;
         min-width: 800px;
-    }
-
-    label {
-        display: inline-block;
     }
 
     input {
@@ -14,34 +10,23 @@
         background: transparent;
     }
 
-    input[type=text]:focus {
-        background-color: lightblue;
+    input[type=text]:focus, input[type=number]:focus, textarea:focus {
+        border: 1px solid lightblue;
     }
 
-    input[type=number]:focus {
-        background-color: lightblue;
-    }
-
-    textarea:focus {
-        background-color: lightblue;
-    }
-
-    span.sheet-big {
-        font-family: Consolas, monaco, monospace;
-        font-weight: bold;
-        font-size:1.5em;
-    }
-
-    h1 {
-        font-family: Consolas, monaco, monospace;
-    }
-
-    input.sheet-big[type=number] {
+    input.sheet-status-value[type=number] {
         -moz-appearance: textfield;
         width: 40px;
         font-size:2em;
         background: transparent;
         text-align: center; 
+    }
+
+    span.sheet-status-label {
+        font-family: Consolas, monaco, monospace;
+        font-weight: bold;
+        font-size:1.5em;
+        display: inline-block;
     }
 
     /* Chrome, Safari, Edge, Opera */
@@ -50,34 +35,48 @@
         margin: 0;
     }
 
-    div.sheet-card{
-        border: solid gray;
-        border-radius: 4px;
-        padding: 5px;
-    }
-
-    /* input.sheet-card-line {
-
-    } */
-
     textarea.sheet-card-block {
         font-family: Consolas, monaco, monospace;
         background: transparent;
         border: none;
+        resize: vertical;
     }
 
-    input.sheet-card-digits {
+    h1 {
+        font-family: Consolas, monaco, monospace;
+    }
+
+    div.sheet-card{
+        border: solid gray;
+        border-radius: 8px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    input.sheet-card-name {
+        font-size:1.1em;
+    }
+
+    input.sheet-card-tags {
+        font-size:0.9em;
+    }
+
+    input.sheet-card-range-digits {
         font-family: Consolas, monaco, monospace;
         background: transparent;
         text-align: right;
         border: none;
         width: 30px;
+        font-size: x-small;
     }
 
-    label.sheet-card-caption {
+    input.sheet-card-damage-digits {
         font-family: Consolas, monaco, monospace;
-        font-size:xx-small;
-        padding-bottom: 0px
+        background: transparent;
+        text-align: right;
+        border: none;
+        width: 50px;
+        font-size: x-small;
     }
 
     /* Icon */
