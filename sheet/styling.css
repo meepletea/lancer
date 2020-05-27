@@ -117,7 +117,7 @@ input.sheet-card-range-digits {
     background: transparent;
     text-align: right;
     border: none;
-    width: 30px;
+    width: 25px;
     font-size: x-small;
 }
 
@@ -126,7 +126,7 @@ input.sheet-card-damage-digits {
     background: transparent;
     text-align: right;
     border: none;
-    width: 50px;
+    width: 45px;
     font-size: x-small;
 }
 
@@ -139,11 +139,25 @@ span.sheet-status-label {
 
 textarea.sheet-card-block {
     font-family: Consolas, monaco, monospace;
-    color: black;
-    background: transparent;
     border: none;
-    resize: vertical;
+    resize: none;
     margin-bottom: -10px;
+    background: transparent;
+    color: transparent;
+    background-image: url(https://raw.githubusercontent.com/meepletea/lancer/master/icons/edit.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    transition: all 0.5s ease;
+    height: 30px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+textarea.sheet-card-block:focus {
+    height: 20em;
+    color: black;
+    background-image: none;
+    overflow: auto;
 }
 
 /* Roll Template Styling */
